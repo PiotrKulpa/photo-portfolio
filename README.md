@@ -15,7 +15,9 @@ Instruction
 ### Features
 
 * HTML5 + Flexbox
-* CSs3 + SASS
+* CSS3 + SASS
 * ES6 + Babel
 * Swiper slider
 * Webpack
+* jQuery custom navigation
+* jQuery custom gallery

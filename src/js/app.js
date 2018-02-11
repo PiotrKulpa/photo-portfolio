@@ -2,6 +2,7 @@ import 'jquery';
 import Swiper from 'swiper';
 import '../css/main.scss';
 import { RandomGenerator } from './random-generator';
+import './navigation';
 
 const outputParagraph = document.querySelector('#outputParagraph');
 

@@ -9,19 +9,43 @@ html, body {
 body {
    background: white;
    font-family: 'Raleway', sans-serif;
-   font-size: 14px;
+   font-size: 16px;
    color: $main;
    margin: 0;
    padding: 0;
 }
 
+.slasher {
+  color: $pink-grey;
+  font-size: 1.5em;
+  vertical-align: super;
+}
+
+hr {
+  border-top: 1px solid $pink-grey;
+}
+
+h1 {
+  font-size: 5em;
+  color: $dark;
+}
+
+h2 {
+  font-size: 3em;
+  color: $dark;
+}
+
 #container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
+  height: 100vh;
+
 }
 
 #menu {
   width: 15%;
+  flex-shrink: 0;
+
 
   button {
     display: block;
@@ -43,7 +67,6 @@ body {
 
 .logo {
   margin: 0;
-
   margin: 55px 0 55px 0;
 
 
@@ -140,15 +163,21 @@ body {
 
 main {
   width: 80%;
+  flex-shrink: 1;
+
+  img {
+    width: 100%;
+  }
 }
 
 footer {
+  width: 5%;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   justify-content:space-between;
-  width: 5%;
   background-color: $dark;
   color: white;
   text-align: center;
@@ -179,4 +208,44 @@ footer {
 .svg-inline--fa:hover {
   transition: color 0.5s;
   color: $main;
+}
+
+
+#testimonials blockquote p {
+  color: $dark;
+  font-size: 1.5em;
+}
+
+#testimonials blockquote .svg-inline--fa {
+  color: $main;
+  font-size: 1.5em;
+  display: inline;
+  vertical-align: super;
+
+}
+
+#testimonials blockquote p:last-child {
+  color: $main;
+  font-size: 1.5em;
+}
+
+input, textarea {
+  display: block;
+  width: 500px;
+  padding: 10px;
+  margin: 10px;
+  border: solid 1px $pink-grey;
+}
+
+input[type=button] {
+  background-color: $dark;
+  color: white;
+}
+
+.content {
+  opacity: 0;
+}
+.appear {
+  transition: opacity 1s;
+  opacity: 1;
 }

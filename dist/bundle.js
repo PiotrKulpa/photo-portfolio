@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9993,7 +9993,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	return jQuery;
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)(module)))
 
 /***/ }),
 /* 1 */
@@ -10122,7 +10122,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                                                                                                                                                                                                                                                                                * Released on: February 10, 2018
                                                                                                                                                                                                                                                                                */
 
-var _dom = __webpack_require__(5);
+var _dom = __webpack_require__(6);
 
 var _ssrWindow = __webpack_require__(1);
 
@@ -16703,6 +16703,50 @@ exports.default = Swiper$1;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* WEBPACK VAR INJECTION */(function($) {
+
+//MVC
+
+var model = {};
+
+var controller = {
+  init: function init() {
+    view.init();
+    view.menuClick();
+  }
+};
+
+var view = {
+  btn: $('nav button'),
+  btnHome: $('#home'),
+  appContent: $('.content'),
+  menuClick: function menuClick() {
+    var _this = this;
+
+    this.btn.on('click', function (e) {
+
+      var btnData = $(e.currentTarget).data('show');
+      _this.appContent.hide();
+      _this.appContent.removeClass('appear');
+      $(btnData).show();
+      _this.appContent.addClass('appear');
+    });
+  },
+  init: function init() {
+    this.appContent.hide();
+    this.btnHome.show();
+    this.btnHome.css({ 'opacity': '1' });
+  }
+};
+
+controller.init();
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
@@ -16734,13 +16778,13 @@ var RandomGenerator = exports.RandomGenerator = function () {
 }();
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18340,7 +18384,7 @@ exports.resize = resize;
 exports.scroll = scroll;
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18370,7 +18414,7 @@ module.exports = function (module) {
 };
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18382,9 +18426,11 @@ var _swiper = __webpack_require__(2);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
-__webpack_require__(4);
+__webpack_require__(5);
 
-var _randomGenerator = __webpack_require__(3);
+var _randomGenerator = __webpack_require__(4);
+
+__webpack_require__(3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
