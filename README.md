@@ -17,4 +17,5 @@ Instruction
 * HTML5 + Flexbox
 * CSs3 + SASS
 * ES6 + Babel
+* Swiper slider
 * Webpack
